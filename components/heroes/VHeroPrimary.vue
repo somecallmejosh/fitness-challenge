@@ -10,7 +10,7 @@
             Professionally led fitness training to help you look and feel great!
           </p>
           <button
-            class="w-full lg:w-auto bg-white border-2 border-white text-orange-100 font-bold text-lg py-2 px-16 hover:bg-gray-80 hover:text-white rounded-button-pill"
+            class="w-full lg:w-auto bg-white border-2 border-white text-orange-100 font-bold text-lg py-2 px-16 hover:bg-gray-80 hover:text-white rounded-pill"
           >
             Learn More
           </button>

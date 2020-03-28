@@ -36,7 +36,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [`~/plugins/importGlobalComponents.js`, '~/plugins/vuelidate.js'],
+  plugins: [
+    `~/plugins/importGlobalComponents.js`,
+    '~/plugins/vuelidate.js',
+    '~/plugins/dateFilter.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
