@@ -18,10 +18,10 @@ const months = [
 const dateFilter = (value) => formatDate(value)
 
 function formatDate(inputDate) {
-  const date = new Date(inputDate)
+  const date = new Date(`${inputDate} EDT`)
   const year = date.getFullYear()
   const month = date.getMonth()
-  const day = date.getDate() + 1
+  const day = date.getDate()
   const formattedDate = `${months[month]}/${day}/${year}`
   if (!inputDate.length) {
     return ''

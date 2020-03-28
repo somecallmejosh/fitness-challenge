@@ -45,8 +45,8 @@
 </template>
 <script>
 import { VDrawer } from 'vuetensils'
-import VFooter from '~/components/template/VFooter.vue'
-import VHeader from '~/components/template/VHeader.vue'
+import VFooter from '~/components/layout/template/VFooter.vue'
+import VHeader from '~/components/layout/template/VHeader.vue'
 export default {
   components: { VDrawer, VFooter, VHeader },
   data() {

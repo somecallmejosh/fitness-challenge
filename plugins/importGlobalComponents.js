@@ -5,11 +5,15 @@
 
 import Vue from 'vue'
 import { VImg } from 'vuetensils'
+import VCard from '~/components/ui/VCard'
+import VChip from '~/components/ui/VChip'
 import VFrame from '~/components/layout/VFrame'
-import VPageWrap from '~/components/layout/VPageWrap'
 import VPageHeader from '~/components/ui/VPageHeader'
+import VPageWrap from '~/components/layout/VPageWrap'
 
-Vue.component('VImg', VImg)
+Vue.component('VCard', VCard)
+Vue.component('VChip', VChip)
 Vue.component('VFrame', VFrame)
-Vue.component('VPageWrap', VPageWrap)
+Vue.component('VImg', VImg)
 Vue.component('VPageHeader', VPageHeader)
+Vue.component('VPageWrap', VPageWrap)

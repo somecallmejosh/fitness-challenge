@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   mode: 'universal',
   /*
@@ -15,15 +17,6 @@ export default {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
-  },
-  env: {
-    companyName: 'Fitness Challenge',
-    companyStreetAddress: '1234 Main Street',
-    companyCity: 'Somewheresville',
-    companyState: 'MA',
-    companyZip: '12345',
-    companyPhone: '445-532-8899',
-    companyEmail: 'mail@fitnesschallenge.com'
   },
   /*
    ** Customize the progress-bar color
@@ -70,8 +63,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
     'nuxt-webfontloader'
   ],
@@ -86,7 +77,10 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseUrl: process.env.AXIOS_BASE_URL,
+    proxy: true
+  },
   /*
    ** Build configuration
    */

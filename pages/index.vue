@@ -70,8 +70,8 @@
 </template>
 
 <script>
-import VHeroPrimary from '~/components/heroes/VHeroPrimary'
-import VWave from '~/components/template/VWave'
+import VHeroPrimary from '~/components/ui/heroes/VHeroPrimary'
+import VWave from '~/components/layout/template/VWave'
 export default {
   components: {
     VHeroPrimary,

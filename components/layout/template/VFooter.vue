@@ -44,7 +44,7 @@
   </div>
 </template>
 <script>
-import VWave from '~/components/template/VWave'
+import VWave from '~/components/layout/template/VWave'
 export default {
   components: { VWave },
   props: {
@@ -56,13 +56,13 @@ export default {
   },
   data() {
     return {
-      companyName: process.env.companyName,
-      companyStreetAddress: process.env.companyStreetAddress,
-      companyCity: process.env.companyCity,
-      companyState: process.env.companyState,
-      companyZip: process.env.companyZip,
-      companyPhone: process.env.companyPhone,
-      companyEmail: process.env.companyEmail
+      companyName: 'Fitness Challenge',
+      companyStreetAddress: '1234 Main Street',
+      companyCity: 'Somewheresville',
+      companyState: 'MA',
+      companyZip: '12345',
+      companyPhone: '445-532-8899',
+      companyEmail: 'mail@fitnesschallenge.com'
     }
   }
 }
