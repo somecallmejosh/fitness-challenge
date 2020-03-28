@@ -7,7 +7,9 @@ import Vue from 'vue'
 import { VImg } from 'vuetensils'
 import VFrame from '~/components/layout/VFrame'
 import VPageWrap from '~/components/layout/VPageWrap'
+import VPageHeader from '~/components/ui/VPageHeader'
 
 Vue.component('VImg', VImg)
 Vue.component('VFrame', VFrame)
 Vue.component('VPageWrap', VPageWrap)
+Vue.component('VPageHeader', VPageHeader)

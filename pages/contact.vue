@@ -1,6 +1,6 @@
 <template>
   <v-page-wrap>
-    <h1 class="text-5xl font-bold">Contact</h1>
+    <v-page-header>Contact</v-page-header>
     <p>Coming soon</p>
   </v-page-wrap>
 </template>

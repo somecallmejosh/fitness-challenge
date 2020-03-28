@@ -2,7 +2,7 @@
   <v-page-wrap>
     <div class="lg:grid lg:grid-cols-2 lg:gap-6">
       <div class="mb-6 lg:mb-0">
-        <h1 class="text-5xl font-bold">Classes</h1>
+        <v-page-header>Classes</v-page-header>
         <p>Coming soon</p>
       </div>
       <div>
