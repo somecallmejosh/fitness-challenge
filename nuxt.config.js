@@ -64,7 +64,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/moment'
   ],
   markdownit: {
     preset: 'default',
@@ -78,8 +79,9 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseUrl: process.env.AXIOS_BASE_URL,
-    proxy: true
+    baseURL: 'https://fitness-challenger-staging.herokuapp.com',
+    proxyHeaders: false,
+    credentials: false
   },
   /*
    ** Build configuration

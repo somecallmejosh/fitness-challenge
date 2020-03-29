@@ -58,8 +58,8 @@ export default {
           url: '/about'
         },
         {
-          label: 'Classes',
-          url: '/classes'
+          label: 'Challenges',
+          url: '/challenges'
         },
         {
           label: 'Contact',

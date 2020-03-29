@@ -8,7 +8,7 @@
             root: 'w-full'
           }"
           :src="
-            `${payload.image}?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=300&q=80`
+            `https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=300&q=80`
           "
           alt=""
         />
@@ -22,7 +22,11 @@
       </div>
       <div class="mt-auto ">
         <nuxt-link
-          to="/"
+          :to="
+            `${payload.type ? `${payload.type}/` : ''}${
+              payload.attributes.slug
+            }`
+          "
           class="rounded-pill bg-orange-100 text-white font-bold py-2 px-12 hover:bg-orange-90"
           >More Info</nuxt-link
         >
