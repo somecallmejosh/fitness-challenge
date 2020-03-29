@@ -1,0 +1,19 @@
+.btn {
+    @apply border-2 rounded-pill px-12 py-2 font-bold transition-colors duration-200 text-lg;
+}
+
+.btn.btn-default {
+    @apply border-orange-100 bg-orange-100 text-white;
+}
+
+.btn.btn-default:hover {
+    @apply bg-white text-orange-100;
+}
+
+.btn.btn-inverse {
+    @apply bg-white border-white text-orange-100;
+}
+
+.btn.btn-inverse:hover {
+    @apply bg-orange-100 text-white;
+}

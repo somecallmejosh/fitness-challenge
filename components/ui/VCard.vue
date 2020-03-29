@@ -23,11 +23,11 @@
       <div class="mt-auto ">
         <nuxt-link
           :to="
-            `${payload.type ? `${payload.type}/` : ''}${
+            `challenges/${payload.type ? `${payload.type}/` : ''}${
               payload.attributes.slug
             }`
           "
-          class="rounded-pill bg-orange-100 text-white font-bold py-2 px-12 hover:bg-orange-90"
+          class="btn btn-default"
           >More Info</nuxt-link
         >
       </div>

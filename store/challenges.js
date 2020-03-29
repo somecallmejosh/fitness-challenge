@@ -1,5 +1,5 @@
 export const state = () => ({
-  all: []
+  all: {}
 })
 
 export const actions = {
@@ -10,7 +10,7 @@ export const actions = {
 }
 
 export const mutations = {
-  setChallenges(state, challenge) {
-    state.all = [challenge]
+  setChallenges(state, challenges) {
+    state.all = { challenges }
   }
 }

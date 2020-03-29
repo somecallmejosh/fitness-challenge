@@ -1,0 +1,97 @@
+@-moz-document url-prefix() {
+	/* Targets fonts for Firefox browsers */
+	body {
+		font-weight: lighter !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+table,
+ul {
+	margin: 0;
+}
+
+*:not(:empty) + h4,
+*:not(:empty) + h5,
+*:not(:empty) + h6,
+*:not(:empty) + ol,
+*:not(:empty) + p,
+*:not(:empty) + ul,
+*:not(:empty) + .actions,
+*:not(:empty) + .field {
+	@apply mt-5;
+}
+
+*:not(:empty) + h1,
+*:not(:empty) + h2,
+*:not(:empty) + h3 {
+	@apply mt-8;
+}
+
+div,
+li,
+p,
+span,
+td {
+    @apply leading-normal;
+}
+
+h1,
+h2,
+h3 {
+	@apply leading-none;
+}
+
+h4,
+h5,
+h6 {
+	@apply leading-tight;
+}
+
+a,
+div,
+h4,
+h5,
+h6,
+li,
+p,
+span,
+td,
+th,
+input {
+	@apply text-base;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+h2,
+h3 {
+	font-weight: 700;
+}
+
+h4,
+h5,
+h6,
+label {
+	font-weight: 600;
+}
+
+/* @media screen and (min-width: 320px) {
+	html {
+		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+	}
+}
+@media screen and (min-width: 1000px) {
+	html {
+		font-size: 22px;
+	}
+} */

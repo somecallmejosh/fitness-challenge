@@ -3,9 +3,7 @@
     <v-hero-primary />
     <v-wave layout="top" color="text-gray-80" />
     <div class="container mx-auto py-20 px-4">
-      <h1
-        class="text-gray-20 text-6xl text-uppercase text-center font-bold mb-24 leading-none"
-      >
+      <h1 class="text-gray-20 text-6xl text-uppercase text-center mb-24">
         The Fitness Challenge
       </h1>
 
