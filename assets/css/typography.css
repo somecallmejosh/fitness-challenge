@@ -1,97 +1,96 @@
-@-moz-document url-prefix() {
-	/* Targets fonts for Firefox browsers */
-	body {
-		font-weight: lighter !important;
-	}
+:root {
+    --px: 1px;
+    --s1: .25rem;
+    --s2: .5rem;
+    --s3: .75rem;
+    --s4: 1rem;
+    --s5: 1.25rem;
+    --s6: 1.5rem;
+    --s8: 2rem;
+    --s10: 2.5rem;
+    --s12: 3rem;
+    --s16: 4rem;
+    --s20: 5rem;
+    --s24: 6rem;
+    --s32: 8rem;
+    --s40: 10rem;
+    --s48: 12rem;
+    --s56: 14rem;
+    --s64: 16rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-table,
-ul {
-	margin: 0;
+*:not(svg) + h1, 
+*:not(svg) + h2, 
+* + .display {
+    @apply mt-16;
 }
 
-*:not(:empty) + h4,
-*:not(:empty) + h5,
-*:not(:empty) + h6,
-*:not(:empty) + ol,
-*:not(:empty) + p,
-*:not(:empty) + ul,
-*:not(:empty) + .actions,
-*:not(:empty) + .field {
-	@apply mt-5;
+* + h3 {
+    @apply mt-10;
 }
 
-*:not(:empty) + h1,
-*:not(:empty) + h2,
-*:not(:empty) + h3 {
-	@apply mt-8;
+* + h4 {
+@apply mt-8;
 }
 
-div,
-li,
-p,
-span,
-td {
+*:not(h5):not(h6):not(blockquote):not(svg):not(span):not(button) + button,
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + h5, 
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + h6, 
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + p, 
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + ul, 
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + ol {
+    @apply mt-4;
+}
+
+* + blockquote,
+blockquote + * {
+    @apply mt-6;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    @apply font-bold;
+}
+
+h1, h2 {
+    @apply leading-none;
+}
+
+h3, h4, h5, h6, *.h3, *.h4, *.h5, *.h6 {
     @apply leading-normal;
 }
 
-h1,
-h2,
-h3 {
-	@apply leading-none;
+/* ol, ul {
+@apply ml-6;
 }
 
-h4,
-h5,
-h6 {
-	@apply leading-tight;
+ol {
+@apply list-decimal;
 }
 
-a,
-div,
-h4,
-h5,
-h6,
-li,
-p,
-span,
-td,
-th,
-input {
-	@apply text-base;
-}
-
-h1 {
-	font-weight: 900;
-}
-
-h2,
-h3 {
-	font-weight: 700;
-}
-
-h4,
-h5,
-h6,
-label {
-	font-weight: 600;
-}
-
-/* @media screen and (min-width: 320px) {
-	html {
-		font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-	}
-}
-@media screen and (min-width: 1000px) {
-	html {
-		font-size: 22px;
-	}
+ul {
+@apply list-disc;
 } */
+
+*.display {
+    font-size: var(--s10);
+}
+
+h1, *.h1 {
+    font-size: var(--s8);
+}
+
+h2, *.h2 {
+    font-size: 1.75rem;
+}
+
+h3, *.h3 {
+    font-size: var(--s6);
+}
+
+h4, *.h4 {
+    font-size: var(--s5);
+}
+
+h5, h6, *.base {
+    font-size: var(--s4);
+}

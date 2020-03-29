@@ -30,13 +30,6 @@
                 -
                 {{ $moment(item.attributes.end_date).format('MM/DD/YYYY') }}
               </div>
-              <p>
-                {{
-                  item.attributes.description.body
-                    ? item.attributes.description.body
-                    : 'Information on this challenged coming soon.'
-                }}
-              </p>
             </div>
           </v-card>
         </div>
