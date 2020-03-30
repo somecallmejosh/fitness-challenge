@@ -1,3 +1,4 @@
+import axios from 'axios'
 require('dotenv').config()
 
 export default {
@@ -91,5 +92,18 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    async routes() {
+      const challenges = await axios
+        .get('https://fitness-challenger-staging.herokuapp.com/challenges.json')
+        .then((response) => {
+          return response.data.data.map(
+            (entry) => `challenges/${entry.type}/${entry.attributes.slug}/`
+          )
+        })
+
+      return [...challenges]
+    }
   }
 }

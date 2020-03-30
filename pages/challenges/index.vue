@@ -10,25 +10,26 @@
             class="flex flex-col"
             :payload="item"
           >
-            <v-chip class="mt-4 mb-8">
-              {{
-                (new Date(item.attributes.end_date).getTime() -
-                  new Date(item.attributes.start_date).getTime()) /
-                  (1000 * 3600 * 24)
-              }}
-              day {{ item.attributes.description.record_type }}
-            </v-chip>
-            <div class="mb-8">
-              <h2 class="font-bold text-xl text-gray-80">
-                {{ item.attributes.title }}
-              </h2>
-              <div
-                v-if="item.attributes.start_date && item.attributes.start_date"
-                class="text-gray-60 mt-2"
-              >
-                {{ $moment(item.attributes.start_date).format('MM/DD/YYYY') }}
-                -
-                {{ $moment(item.attributes.end_date).format('MM/DD/YYYY') }}
+            <div>
+              <v-chip class="mb-4">
+                {{ item.attributes.level }}
+              </v-chip>
+              <div>
+                <h2 class="font-bold text-xl text-gray-80">
+                  {{ item.attributes.title }}
+                </h2>
+                <div
+                  v-if="
+                    item.attributes.start_date && item.attributes.start_date
+                  "
+                  class="text-gray-60 mt-2"
+                >
+                  {{
+                    $moment(item.attributes.start_date).format('MMM DD,  YYYY')
+                  }}
+                  -
+                  {{ $moment(item.attributes.end_date).format('MMM DD, YYYY') }}
+                </div>
               </div>
             </div>
           </v-card>

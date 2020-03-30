@@ -15,12 +15,12 @@
       </client-only>
     </v-frame>
     <div
-      class="p-6 pt-32 pb-12 shadow-2xl rounded-lg -mt-32 flex flex-col flex-grow"
+      class="px-6 pt-32 pb-8 shadow-2xl rounded-lg -mt-32 flex flex-col flex-grow"
     >
-      <div>
+      <div class="mt-4 mb-8">
         <slot></slot>
       </div>
-      <div class="mt-auto ">
+      <div class="mt-auto">
         <nuxt-link
           :to="
             `challenges/${payload.type ? `${payload.type}/` : ''}${
