@@ -7,7 +7,7 @@
         >
           <div>
             <img
-              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
+              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400"
               class="rounded-blob-4"
               alt
             />
@@ -81,6 +81,39 @@ export default {
   computed: {
     challenge() {
       return this.$store.state.challenges.current.challenge.data
+    }
+  },
+  head() {
+    return {
+      title: `${this.challenge.attributes.title} ${process.env.siteName}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.challenge.attributes.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.challenge.attributes.title
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&h=627'
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.challenge.attributes.description
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `${process.env.baseURL}/${this.$nuxt.$route.params.type}/${this.$nuxt.$route.params.slug}`
+        }
+      ]
     }
   }
 }

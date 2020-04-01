@@ -54,12 +54,20 @@ export default {
       showDrawer: false,
       nav: [
         {
-          label: 'About',
-          url: '/about'
+          label: 'Group Challenges',
+          url: '/challenges'
         },
         {
-          label: 'Challenges',
-          url: '/challenges'
+          label: 'Workout Plans',
+          url: '/workout-plans'
+        },
+        {
+          label: 'Meal Plans',
+          url: '/meal-plans'
+        },
+        {
+          label: 'About Us',
+          url: '/about'
         },
         {
           label: 'Contact',

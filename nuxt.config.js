@@ -3,6 +3,10 @@ require('dotenv').config()
 
 export default {
   mode: 'universal',
+  env: {
+    baseURL: 'https://fitness-challenger-staging.herokuapp.com',
+    siteName: 'Fitness Challenge'
+  },
   /*
    ** Headers of the page
    */
@@ -15,6 +19,18 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        hid: 'apple-mobile-web-app-title',
+        property: 'apple-mobile-web-app-title',
+        name: 'apple-mobile-web-app-title',
+        content: 'Fitness Challenge'
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Fitness Challenge'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
