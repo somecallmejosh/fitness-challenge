@@ -1,0 +1,59 @@
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+.vts-drawer {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.vts-drawer__content {
+  @apply bg-white text-gray-90;
+  transition: transform 0.3s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.offsite a {
+  @apply block border-b border-gray-10 block p-4 font-bold;
+}
+
+.offsite a:hover,
+.offsite .nuxt-link-active {
+  @apply text-orange-100;
+}
+.offsite .nuxt-link-active {
+  cursor: default;
+}

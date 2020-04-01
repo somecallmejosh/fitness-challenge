@@ -42,7 +42,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/buttons.css', '~/assets/css/typography.css'],
+  css: [
+    '~/assets/css/baseline.css',
+    '~/assets/css/buttons.css',
+    '~/assets/css/typography.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -110,6 +114,7 @@ export default {
     extend(config, ctx) {}
   },
   generate: {
+    fallback: true,
     async routes() {
       const challenges = await axios
         .get('https://fitness-challenger-staging.herokuapp.com/challenges.json')
