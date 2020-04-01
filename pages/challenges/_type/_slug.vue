@@ -30,13 +30,11 @@
               class="mt-2 text-2xl font-bold"
             >
               {{
-                $moment(challenge.attributes.start_date).format(
-                  'dddd MMM, YYYY'
-                )
+                $moment(challenge.attributes.start_date).format('MMM DD, YYYY')
               }}
-              through
+              -
               {{
-                $moment(challenge.attributes.end_date).format('dddd MMM, YYYY')
+                $moment(challenge.attributes.end_date).format('MMM DD, YYYY')
               }}
             </p>
             <button class="btn btn-inverse">Register Today</button>
@@ -45,7 +43,18 @@
       </div>
     </div>
     <v-wave layout="top" color="text-orange-100" />
-    <v-page-wrap>
+    <v-page-wrap class="-mt-2 lg:-mt-32">
+      <nav class="mb-12 text-sm">
+        <nuxt-link to="/" class="text-orange-100 hover:underline"
+          >Home</nuxt-link
+        >
+        /
+        <nuxt-link to="/challenges" class="text-orange-100 hover:underline"
+          >Challenges</nuxt-link
+        >
+        /
+        <span class="text-gray-70">{{ challenge.attributes.title }}</span>
+      </nav>
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-32">
         <div class="lg:col-span-3">
           <v-chip class="mb-8">
@@ -62,8 +71,32 @@
           </div>
         </div>
         <div class="lg:col-start-4 lg:col-span-2">
-          <button class="btn btn-default">Register Today</button>
-          <p>Reserve your spot early. Class sizes are limited.</p>
+          <div class="rounded-blob-1 border border-gray-10 overflow-hidden">
+            <v-wave layout="top" color="text-gray-10" />
+            <div class="p-10">
+              <h3>Registration Info</h3>
+              <p>
+                The {{ challenge.attributes.title }} challenge begins
+                <span class="font-bold">
+                  {{
+                    $moment(challenge.attributes.start_date).format(
+                      'dddd MMM DD, YYYY'
+                    )
+                  }}
+                </span>
+                and ends
+                <span class="font-bold">
+                  {{
+                    $moment(challenge.attributes.end_date).format(
+                      'dddd MMM DD, YYYY'
+                    )
+                  }}</span
+                >. Class sizes are limited. Reserve your spot early.
+              </p>
+              <button class="btn btn-default">Register Today</button>
+            </div>
+            <v-wave layout="bottom" color="text-gray-10" />
+          </div>
         </div>
       </div>
     </v-page-wrap>
