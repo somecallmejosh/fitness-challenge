@@ -9,15 +9,15 @@
             <img
               src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
               class="rounded-blob-4"
-              alt=""
+              alt
             />
           </div>
           <div>
-            <v-chip>
-              {{ challenge.attributes.level }} {{ challenge.type }}
-            </v-chip>
+            <v-chip
+              >{{ challenge.attributes.level }} {{ challenge.type }}</v-chip
+            >
             <p
-              class="text-6xl leading-none font-bold border-b border-orange-50 pb-4 mb-4"
+              class="text-4xl lg:text-6xl leading-none font-bold border-b border-orange-50 pb-4 mb-4"
             >
               {{ challenge.attributes.title }}
             </p>
