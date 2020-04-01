@@ -4,10 +4,10 @@
       <div class="hero flex items-center">
         <div class="ml-auto lg:w-2/3 mt-20 relative z-10">
           <h1 class="text-5xl lg:text-6xl mb-4">
-            Fitness Challenge<br />Training Camps
+            Do you want to look and feel great?
           </h1>
           <p class="text-3xl lg:text-5xl leading-tight mb-6 text-orange-100">
-            Professionally led fitness training to help you look and feel great!
+            We'll help guide you to the best shape of your life!
           </p>
           <nuxt-link to="/challenges" class="btn btn-inverse w-full lg:w-auto">
             Learn More

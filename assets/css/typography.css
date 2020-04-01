@@ -1,62 +1,75 @@
 :root {
-    --px: 1px;
-    --s1: .25rem;
-    --s2: .5rem;
-    --s3: .75rem;
-    --s4: 1rem;
-    --s5: 1.25rem;
-    --s6: 1.5rem;
-    --s8: 2rem;
-    --s10: 2.5rem;
-    --s12: 3rem;
-    --s16: 4rem;
-    --s20: 5rem;
-    --s24: 6rem;
-    --s32: 8rem;
-    --s40: 10rem;
-    --s48: 12rem;
-    --s56: 14rem;
-    --s64: 16rem;
+  --px: 1px;
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.25rem;
+  --s6: 1.5rem;
+  --s8: 2rem;
+  --s10: 2.5rem;
+  --s12: 3rem;
+  --s16: 4rem;
+  --s20: 5rem;
+  --s24: 6rem;
+  --s32: 8rem;
+  --s40: 10rem;
+  --s48: 12rem;
+  --s56: 14rem;
+  --s64: 16rem;
 }
 
-*:not(svg) + h1, 
-*:not(svg) + h2, 
+*:not(svg) + h1,
+*:not(svg) + h2,
 * + .display {
-    @apply mt-16;
+  @apply mt-16;
 }
 
 * + h3 {
-    @apply mt-10;
+  @apply mt-10;
 }
 
 * + h4 {
-@apply mt-8;
+  @apply mt-8;
 }
 
 *:not(h5):not(h6):not(blockquote):not(svg):not(span):not(button) + button,
-*:not(h5):not(h6):not(blockquote):not(svg):not(span) + h5, 
-*:not(h5):not(h6):not(blockquote):not(svg):not(span) + h6, 
-*:not(h5):not(h6):not(blockquote):not(svg):not(span) + p, 
-*:not(h5):not(h6):not(blockquote):not(svg):not(span) + ul, 
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + h5,
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + h6,
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + p,
+*:not(h5):not(h6):not(blockquote):not(svg):not(span) + ul,
 *:not(h5):not(h6):not(blockquote):not(svg):not(span) + ol {
-    @apply mt-4;
+  @apply mt-4;
 }
 
 * + blockquote,
 blockquote + * {
-    @apply mt-6;
+  @apply mt-6;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    @apply font-bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
 }
 
-h1, h2 {
-    @apply leading-none;
+h1,
+h2 {
+  @apply leading-none;
 }
 
-h3, h4, h5, h6, *.h3, *.h4, *.h5, *.h6 {
-    @apply leading-normal;
+h3,
+h4,
+h5,
+h6,
+*.h3,
+*.h4,
+*.h5,
+*.h6 {
+  @apply leading-normal;
 }
 
 /* ol, ul {
@@ -72,25 +85,31 @@ ul {
 } */
 
 *.display {
-    font-size: var(--s10);
+  font-size: var(--s10);
 }
 
-h1, *.h1 {
-    font-size: var(--s8);
+h1,
+*.h1 {
+  font-size: var(--s8);
 }
 
-h2, *.h2 {
-    font-size: 1.75rem;
+h2,
+*.h2 {
+  font-size: 1.75rem;
 }
 
-h3, *.h3 {
-    font-size: var(--s6);
+h3,
+*.h3 {
+  font-size: var(--s6);
 }
 
-h4, *.h4 {
-    font-size: var(--s5);
+h4,
+*.h4 {
+  font-size: var(--s5);
 }
 
-h5, h6, *.base {
-    font-size: var(--s4);
+h5,
+h6,
+*.base {
+  font-size: var(--s4);
 }
