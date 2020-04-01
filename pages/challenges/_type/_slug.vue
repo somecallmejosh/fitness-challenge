@@ -45,9 +45,7 @@
     <v-wave layout="top" color="text-orange-100" />
     <v-page-wrap class="-mt-2 lg:-mt-32">
       <nav class="mb-12 text-sm">
-        <nuxt-link to="/" class="text-orange-100 hover:underline"
-          >Home</nuxt-link
-        >
+        <nuxt-link to="/">Home</nuxt-link>
         /
         <nuxt-link to="/challenges" class="text-orange-100 hover:underline"
           >Challenges</nuxt-link

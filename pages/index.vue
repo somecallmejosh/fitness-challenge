@@ -3,11 +3,11 @@
     <v-hero-primary />
     <v-wave layout="top" color="text-gray-80" />
     <div class="container mx-auto py-20 px-4">
-      <h1 class="text-gray-20 text-6xl text-uppercase text-center mb-24">
+      <h1 class="text-gray-20 text-4xl lg:text-6xl text-center mb-16 lg:mb-24">
         The Fitness Challenge
       </h1>
 
-      <div class="lg:grid lg:grid-cols-3 lg:gap-12 text-center">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
         <nuxt-link
           v-for="(teaser, index) in teasers"
           :key="index"

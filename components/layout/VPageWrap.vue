@@ -10,4 +10,12 @@
 export default {}
 </script>
 
-<style></style>
+<style scoped>
+a:not(.btn) {
+  @apply text-orange-100 font-semibold;
+}
+
+a:not(.btn):hover {
+  @apply underline;
+}
+</style>
