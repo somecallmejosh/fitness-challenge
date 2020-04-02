@@ -1,5 +1,5 @@
 .btn {
-  @apply border-2 rounded-pill px-12 py-2 font-bold transition-colors duration-200 text-lg;
+  @apply border-2 rounded-pill px-12 py-2 inline-flex font-bold transition-colors duration-200 text-lg;
 }
 
 .btn.btn-default {

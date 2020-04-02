@@ -71,7 +71,12 @@ h6,
 *.h6 {
   @apply leading-normal;
 }
-
+p,
+ol,
+ul,
+td {
+  font-size: var(--s4);
+}
 /* ol, ul {
 @apply ml-6;
 }
