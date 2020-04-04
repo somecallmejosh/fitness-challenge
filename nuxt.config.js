@@ -5,6 +5,7 @@ export default {
   mode: 'universal',
   env: {
     baseURL: 'https://fitness-challenger-staging.herokuapp.com',
+    authBaseURL: 'https://fitness-backend-prod.herokuapp.com/',
     siteName: 'Fitness Challenge'
   },
   /*
@@ -98,7 +99,6 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://fitness-challenger-staging.herokuapp.com',
     proxyHeaders: false,
     credentials: false
   },
@@ -111,20 +111,23 @@ export default {
       local: {
         endpoints: {
           login: {
-            url: '/api/session/login',
+            url: 'https://fitness-backend-prod.herokuapp.com/login',
             method: 'post',
-            propertyName: 'token'
+            propertyName: false
           },
-          logout: { url: '/api/session/logout', method: 'delete' },
+          logout: {
+            url: 'https://fitness-backend-prod.herokuapp.com/me',
+            method: 'delete'
+          },
           user: {
-            url: '/api/session/user',
+            url: 'https://fitness-backend-prod.herokuapp.com/me',
             method: 'get',
             propertyName: 'user'
           }
         },
         // tokenRequired: true,
-        tokenType: 'bearer'
-        // autoFetchUser: true
+        tokenType: '',
+        autoFetchUser: true
       }
     }
   },

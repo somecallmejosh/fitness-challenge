@@ -5,11 +5,15 @@ export const state = () => ({
 
 export const actions = {
   async fetchAllChallenges({ commit }) {
-    const challenges = await this.$axios.$get('challenges.json')
+    const challenges = await this.$axios.$get(
+      `${process.env.baseURL}/challenges.json`
+    )
     commit('setChallenges', challenges)
   },
   async fetchCurrentChallenge({ commit }, slug) {
-    const challenge = await this.$axios.$get(`challenges/${slug}.json`)
+    const challenge = await this.$axios.$get(
+      `${process.env.baseURL}/challenges/${slug}.json`
+    )
     commit('setCurrentChallenge', challenge)
   }
 }
