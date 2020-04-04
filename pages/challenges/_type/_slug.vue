@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="mt-16 pt-12 lg:pt-20 pb-8 bg-orange-100 text-white">
+    <div
+      class="mt-16 pt-12 lg:pt-20 pb-8 text-white"
+      :class="`bg-${levelColor}`"
+    >
       <div class="container mx-auto px-4">
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center"
@@ -27,8 +30,10 @@
                 challenge.attributes.start_date &&
                   challenge.attributes.start_date
               "
-              class="mt-2 text-2xl font-bold"
+              class="mt-2 text-2xl font-bold flex items-center"
             >
+              <v-icon name="calendar" size="1em" class="mr-px" />
+
               {{
                 $moment(challenge.attributes.start_date).format('MMM DD, YYYY')
               }}
@@ -42,7 +47,7 @@
         </div>
       </div>
     </div>
-    <v-wave layout="top" color="text-orange-100" />
+    <v-wave layout="top" :class="`text-${levelColor}`" />
     <v-page-wrap class="-mt-2 lg:-mt-32">
       <nav class="mb-12 text-sm">
         <nuxt-link to="/">Home</nuxt-link>
@@ -109,9 +114,27 @@ export default {
   async fetch({ store, params }) {
     await store.dispatch('challenges/fetchCurrentChallenge', params.slug)
   },
+  data() {
+    return {
+      challengeColor: ''
+    }
+  },
   computed: {
     challenge() {
       return this.$store.state.challenges.current.challenge.data
+    },
+    levelColor() {
+      let color = ''
+      if (this.challenge.attributes.level === 'beginner') {
+        color = 'gray-80'
+      } else if (this.challenge.attributes.level === 'intermediate') {
+        color = 'orange-100'
+      } else if (this.challenge.attributes.level === 'advanced') {
+        color = 'red-100'
+      } else {
+        color = 'black'
+      }
+      return color
     }
   },
   head() {

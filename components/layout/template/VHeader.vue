@@ -23,20 +23,23 @@
           >Fitness Challenge</span
         >
       </nuxt-link>
-      <div class="meta ml-auto flex items-center">
-        <button v-if="$auth.loggedIn" class="btn btn-default btn-small">
-          Logout
-        </button>
-        <span>
+      <div class="meta ml-auto flex items-center text-gray-70">
+        <nuxt-link
+          v-if="!$auth.loggedIn"
+          to="/auth/login"
+          aria-label="Log in"
+          class="hover:opacity-75"
+        >
+          <v-icon name="user-circle" />
+        </nuxt-link>
+        <span class="ml-4">
           <button
-            class="ml-4 hover:opacity-75 flex items-center"
+            class="hover:opacity-75 flex items-center"
+            aria-label="Menu Button"
             @click="onClickButton"
           >
-            <span class="text-sm">Menu</span>
             <div aria-hidden="true" class="pl-1">
-              <div class="w-6 h-1 bg-gray-70 mb-1"></div>
-              <div class="w-6 h-1 bg-gray-70 mb-1"></div>
-              <div class="w-6 h-1 bg-gray-70"></div>
+              <v-icon name="menu" />
             </div>
           </button>
         </span>

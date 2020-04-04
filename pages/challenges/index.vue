@@ -19,13 +19,16 @@
               </h2>
               <div
                 v-if="item.attributes.start_date && item.attributes.start_date"
-                class="text-gray-60 mt-2"
+                class="text-gray-60 mt-2 flex item-center"
               >
-                {{
-                  $moment(item.attributes.start_date).format('MMM DD,  YYYY')
-                }}
-                -
-                {{ $moment(item.attributes.end_date).format('MMM DD, YYYY') }}
+                <v-icon name="calendar" size="1rem" class="mr-px" />
+                <span>
+                  {{
+                    $moment(item.attributes.start_date).format('MMM DD,  YYYY')
+                  }}
+                  -
+                  {{ $moment(item.attributes.end_date).format('MMM DD, YYYY') }}
+                </span>
               </div>
             </div>
           </div>

@@ -11,6 +11,7 @@ import VError from '~/components/ui/forms/VError'
 import VErrorWrapper from '~/components/ui/forms/VErrorWrapper'
 import VField from '~/components/ui/forms/VField'
 import VFrame from '~/components/layout/VFrame'
+import VIcon from '~/components/ui/VIcon'
 import VPageHeader from '~/components/ui/VPageHeader'
 import VPageWrap from '~/components/layout/VPageWrap'
 
@@ -20,6 +21,7 @@ Vue.component('VError', VError)
 Vue.component('VErrorWrapper', VErrorWrapper)
 Vue.component('VField', VField)
 Vue.component('VFrame', VFrame)
+Vue.component('VIcon', VIcon)
 Vue.component('VImg', VImg)
 Vue.component('VPageHeader', VPageHeader)
 Vue.component('VPageWrap', VPageWrap)

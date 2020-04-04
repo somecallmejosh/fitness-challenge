@@ -66,7 +66,7 @@ export default {
     purgeCSSInDev: false
   },
   purgeCSS: {
-    whitelist: ['']
+    whitelist: ['bg-red-100']
   },
   webfontloader: {
     google: {

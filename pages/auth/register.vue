@@ -26,8 +26,8 @@
           required.</strong
         >
         Receive discounts on Group Challenges, and have access to our complete
-        workout and meal plan libraries. We will not ask for your credit card
-        information until you are completely satisfied.
+        workout and meal plan libraries. We will never ask for your credit card
+        information during your trial period.
       </p>
       <form action="" class="mt-6" @submit.prevent="register()">
         <v-field>

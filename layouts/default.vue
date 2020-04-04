@@ -10,15 +10,11 @@
       >
         <button
           class="absolute right-0 h-4 w-6 mr-4 mt-4 flex items-center hover:opacity-75"
+          aria-label="Close menu"
           @click="showDrawer = !showDrawer"
         >
           <div aria-hidden="true">
-            <div
-              class="absolute left-0 h-1 w-6 bg-gray-90 origin-center rotate-45 transform"
-            ></div>
-            <div
-              class="absolute right-0 h-1 w-6 bg-gray-90 origin-center -rotate-45 transform"
-            ></div>
+            <v-icon name="x" />
           </div>
         </button>
         <nav class="mt-8" @click="showDrawer = !showDrawer">
@@ -34,7 +30,7 @@
             {{ link.label }}
           </nuxt-link>
           <nuxt-link v-if="!$auth.loggedIn" to="/auth/register"
-            >Register</nuxt-link
+            >Become a Member</nuxt-link
           >
         </nav>
         <div class="p-4" @click="showDrawer = !showDrawer">

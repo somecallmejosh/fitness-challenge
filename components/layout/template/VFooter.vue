@@ -16,12 +16,12 @@
             >
               {{ link.label }}
             </nuxt-link>
-            <nuxt-link v-if="$auth.loggedIn" to="/auth/login">Login</nuxt-link>
+            <nuxt-link v-if="!$auth.loggedIn" to="/auth/login">Login</nuxt-link>
             <nuxt-link v-if="$auth.loggedIn" to="/auth/logout"
               >Logout</nuxt-link
             >
             <nuxt-link v-if="!$auth.loggedIn" to="/auth/register"
-              >Register</nuxt-link
+              >Become a Member</nuxt-link
             >
           </nav>
           <div class="mb-20 lg:mb-0">
