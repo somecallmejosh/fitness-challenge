@@ -6,7 +6,7 @@
         transition="slide-right"
         bg-transition="fade"
         no-scroll
-        :classes="{ content: 'offsite relative' }"
+        :classes="{ content: 'bg-white offsite relative' }"
       >
         <button
           class="absolute right-0 h-4 w-6 mr-4 mt-4 flex items-center hover:opacity-75"
@@ -33,7 +33,20 @@
           >
             {{ link.label }}
           </nuxt-link>
+          <nuxt-link v-if="!$auth.loggedIn" to="/auth/register"
+            >Register</nuxt-link
+          >
         </nav>
+        <div class="p-4" @click="showDrawer = !showDrawer">
+          <button v-if="$auth.loggedIn" class="btn btn-default w-full">
+            Logout
+          </button>
+          <div v-else>
+            <nuxt-link class="btn btn-default mb-2" to="/auth/login"
+              >Login</nuxt-link
+            >
+          </div>
+        </div>
       </VDrawer>
     </client-only>
     <v-header @menuToggle="updateMenu" />
@@ -83,3 +96,46 @@ export default {
   }
 }
 </script>
+<style>
+.vts-drawer {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.vts-drawer__content {
+  @apply bg-white text-gray-90;
+  transition: transform 0.3s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.offsite a:not(.btn) {
+  @apply block border-b border-gray-10 block p-4 font-bold;
+}
+
+.offsite a:not(.btn):hover,
+.offsite .nuxt-link-active {
+  @apply text-orange-100;
+}
+.offsite .nuxt-link-active {
+  cursor: default;
+}
+</style>

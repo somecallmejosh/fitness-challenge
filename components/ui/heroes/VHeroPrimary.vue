@@ -9,7 +9,7 @@
           <p class="text-3xl lg:text-5xl leading-tight mb-6 text-orange-100">
             We'll help guide you to the best shape of your life!
           </p>
-          <nuxt-link to="/challenges" class="btn btn-inverse w-full lg:w-auto">
+          <nuxt-link to="/challenges" class="btn btn-inverse">
             Learn More
           </nuxt-link>
         </div>

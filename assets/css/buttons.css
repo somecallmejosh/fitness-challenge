@@ -1,5 +1,9 @@
 .btn {
-  @apply border-2 rounded-pill px-12 py-2 inline-flex font-bold transition-colors duration-200 text-lg;
+  @apply border-2 rounded-pill px-12 py-2 inline-flex justify-center text-center font-bold transition-colors duration-200 text-lg;
+}
+
+.btn-small {
+  @apply px-4 py-1 text-sm;
 }
 
 .btn.btn-default {
@@ -16,4 +20,8 @@
 
 .btn.btn-inverse:hover {
   @apply bg-orange-100 text-white;
+}
+
+.btn[disabled] {
+  @apply pointer-events-none bg-gray-20 border-gray-20 text-gray-50;
 }

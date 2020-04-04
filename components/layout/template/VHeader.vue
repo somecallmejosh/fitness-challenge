@@ -24,17 +24,22 @@
         >
       </nuxt-link>
       <div class="meta ml-auto flex items-center">
-        <button
-          class="ml-4 hover:opacity-75 flex items-center"
-          @click="onClickButton"
-        >
-          <span class="text-sm">Menu</span>
-          <div aria-hidden="true" class="pl-1">
-            <div class="w-6 h-1 bg-gray-70 mb-1"></div>
-            <div class="w-6 h-1 bg-gray-70 mb-1"></div>
-            <div class="w-6 h-1 bg-gray-70"></div>
-          </div>
+        <button v-if="$auth.loggedIn" class="btn btn-default btn-small">
+          Logout
         </button>
+        <span>
+          <button
+            class="ml-4 hover:opacity-75 flex items-center"
+            @click="onClickButton"
+          >
+            <span class="text-sm">Menu</span>
+            <div aria-hidden="true" class="pl-1">
+              <div class="w-6 h-1 bg-gray-70 mb-1"></div>
+              <div class="w-6 h-1 bg-gray-70 mb-1"></div>
+              <div class="w-6 h-1 bg-gray-70"></div>
+            </div>
+          </button>
+        </span>
       </div>
     </div>
   </header>

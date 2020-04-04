@@ -45,16 +45,13 @@ export default {
   css: [
     '~/assets/css/baseline.css',
     '~/assets/css/buttons.css',
+    '~/assets/css/forms.css',
     '~/assets/css/typography.css'
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    `~/plugins/importGlobalComponents.js`,
-    '~/plugins/vuelidate.js',
-    '~/plugins/dateFilter.js'
-  ],
+  plugins: ['~/plugins/dateFilter.js', `~/plugins/importGlobalComponents.js`],
   /*
    ** Nuxt.js dev-modules
    */
@@ -86,7 +83,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/markdownit',
     'nuxt-webfontloader',
-    '@nuxtjs/moment'
+    '@nuxtjs/moment',
+    '@nuxtjs/auth'
   ],
   markdownit: {
     preset: 'default',
@@ -103,6 +101,32 @@ export default {
     baseURL: 'https://fitness-challenger-staging.herokuapp.com',
     proxyHeaders: false,
     credentials: false
+  },
+  /*
+   ** Nuxt Auth module configuration
+   ** See https://auth.nuxtjs.org/
+   */
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/api/session/login',
+            method: 'post',
+            propertyName: 'token'
+          },
+          logout: { url: '/api/session/logout', method: 'delete' },
+          user: {
+            url: '/api/session/user',
+            method: 'get',
+            propertyName: 'user'
+          }
+        },
+        // tokenRequired: true,
+        tokenType: 'bearer'
+        // autoFetchUser: true
+      }
+    }
   },
   /*
    ** Build configuration
