@@ -7,17 +7,59 @@ public_folder: "static/images/uploads" # The src attribute for uploaded media wi
 
 collections:
   - name: "workouts"
-    identifier_field: title,
-    label: "Workouts"
+    label: "Workout Plans"
+    label_singular: "Workout"
     format: "json"
-    folder: "static/content/_workouts"
+    folder: "static/content/workouts"
     create: true
-    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body Copy", name: "body", widget: "markdown" }
+      - label: "Exercises"
+        name: "exercises"
+        label_singular: "exercise"
+        widget: "relation"
+        collection: "exercises"
+        searchFields: ["title", "description"]
+        valueField: "title"
+        multiple: true
+  - name: "meal_plans"
+    label: "Meal Plans"
+    label_singular: "Meal Plan"
+    format: "json"
+    folder: "static/content/meal-plans"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body Copy", name: "body", widget: "markdown" }
+  - name: "group_challenges"
+    label: "Group Challenges"
+    label_singular: "Group Challenge"
+    format: "json"
+    folder: "static/content/group_challenges"
+    create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Start Date", name: "start_date", widget: "datetime" }
       - { label: "End Date", name: "end_date", widget: "datetime" }
+      - { label: "Class duration", name: "class_duration", widget: "number", comment: "Class duration in minutes" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body Copy", name: "body", widget: "markdown" }
+  - label: 'Exercises'
+    name: 'exercises'
+    folder: "static/content/exercises" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'json'
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Video, name: video, widget: string}
+      - {label: Description, name: description, widget: string, required: false}
