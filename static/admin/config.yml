@@ -24,7 +24,7 @@ collections:
         widget: "relation"
         collection: "exercises"
         searchFields: ["title", "description"]
-        valueField: "{{slug}}"
+        valueField: "title"
         displayFields: ["title", "description"]
         multiple: true
   - name: "meal_plans"
