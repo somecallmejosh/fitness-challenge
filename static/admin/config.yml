@@ -25,6 +25,7 @@ collections:
         collection: "exercises"
         searchFields: ["title", "description"]
         valueField: "title"
+        displayFields: ["title", "description", "image"]
         multiple: true
   - name: "meal_plans"
     label: "Meal Plans"
@@ -60,6 +61,6 @@ collections:
     format: 'json'
     fields:
       - {label: Title, name: title, widget: string}
-      - {label: Image, name: image, widget: image}
-      - {label: Video, name: video, widget: string}
+      - {label: Image, name: image, widget: image, required: false}
+      - {label: Video, name: video, widget: string, required: false}
       - {label: Description, name: description, widget: string, required: false}
