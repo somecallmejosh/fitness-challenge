@@ -63,4 +63,4 @@ collections:
       - {label: Title, name: title, widget: string}
       - {label: Image, name: image, widget: image, required: false}
       - {label: Video, name: video, widget: string, required: false}
-      - {label: Description, name: description, widget: string, required: false}
+      - {label: Description, name: description, widget: markdown, required: false}
