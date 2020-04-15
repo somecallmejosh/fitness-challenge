@@ -9,7 +9,6 @@ collections:
   - name: "workouts"
     label: "Workouts"
     format: "json"
-    create: true,
     files:
       - label: "Workouts Page"
         name: "workouts"
