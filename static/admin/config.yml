@@ -10,7 +10,7 @@ collections:
     identifier_field: title,
     label: "Workouts"
     format: "json"
-    folder: "static/content/workouts"
+    folder: "static/content/_workouts"
     create: true
     slug: "{{slug}}"
     fields:
