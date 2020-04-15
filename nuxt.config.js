@@ -34,7 +34,10 @@ export default {
         content: 'Fitness Challenge'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+    ]
   },
   /*
    ** Customize the progress-bar color
