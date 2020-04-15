@@ -7,17 +7,17 @@ public_folder: "static/images/uploads" # The src attribute for uploaded media wi
 
 collections:
   - name: "workouts"
+    identifier_field: title,
     label: "Workouts"
     format: "json"
-    files:
-      - label: "Workouts Page"
-        name: "workouts"
-        file: "static/content/workouts.json"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Start Date", name: "start_date", widget: "datetime" }
-          - { label: "End Date", name: "end_date", widget: "datetime" }
-          - { label: "Featured Image", name: "image", widget: "image" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Body Copy", name: "body", widget: "markdown" }
+    folder: "static/content/workouts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Start Date", name: "start_date", widget: "datetime" }
+      - { label: "End Date", name: "end_date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body Copy", name: "body", widget: "markdown" }
