@@ -18,15 +18,6 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body Copy", name: "body", widget: "markdown" }
-      - label: "Exercises"
-        name: "exercises"
-        label_singular: "exercise"
-        widget: "relation"
-        collection: "exercises"
-        searchFields: ["title", "description"]
-        valueField: "title"
-        displayFields: ["title", "description"]
-        multiple: true
   - name: "meal_plans"
     label: "Meal Plans"
     label_singular: "Meal Plan"
@@ -52,15 +43,4 @@ collections:
       - { label: "End Date", name: "end_date", widget: "datetime" }
       - { label: "Class duration", name: "class_duration", widget: "number", comment: "Class duration in minutes" }
       - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "string" }
-  - label: 'Exercises'
-    name: 'exercises'
-    folder: "/content/exercises" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    format: 'json'
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Image, name: image, widget: image, required: false}
-      - {label: Video, name: video, widget: string, required: false}
-      - {label: Description, name: description, widget: markdown, required: false}
+      - { label: "Description", name: "description", widget: "markdown" }
